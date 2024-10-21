@@ -157,26 +157,24 @@
 
 
 // theme //
-  let ModeTheme = localStorage.getItem("mode");
-if (ModeTheme == null) {
-    ModeTheme = "light"; // Set default to "light" if nothing in localStorage
-    localStorage.setItem("mode", ModeTheme); // Store the default value in localStorage
-}
-
-function changetheme() {
-    console.log("Current Mode before change:", ModeTheme); // Log current mode before changing
-
-    if (ModeTheme === "light") {
-        ModeTheme = "night";
-    } else {
-        ModeTheme = "light";
-    }
-    
-    localStorage.setItem("mode", ModeTheme); // Store the updated mode
-    console.log("Current Mode after change:", ModeTheme); // Log the updated mode
-
-    modeTheme(); // Call to update the theme styles
-}
+  let ModeTheme = localStorage.getItem("mode") ;
+  if ( ModeTheme == null){
+    ModeTheme = "light";
+  }
+  
+  function changetheme(){
+        if( ModeTheme === "light" ){
+            ModeTheme = "night" ;
+            localStorage.setItem("mode",ModeTheme);
+            consol.log(ModeTheme);
+            modeTheme();
+        } else {
+            ModeTheme = "light" ; 
+            localStorage.setItem("mode",ModeTheme);
+            consol.log(ModeTheme);
+            modeTheme();
+        }
+  }
 
 
 
