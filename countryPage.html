@@ -133,7 +133,9 @@
             const urlParams = new URLSearchParams(queryString);
             const name = urlParams.get('name');   
             getcountryByname(name);
-           modeTheme();
+           window.onload = function() {
+        modeTheme();
+    };
        </script>
 </body>
 </html>
