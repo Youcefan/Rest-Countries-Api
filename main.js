@@ -161,17 +161,17 @@
   if ( ModeTheme == null){
     ModeTheme = "light";
   }
-  let page ;
-  function changetheme(a){
+  
+  function changetheme(){
         if( ModeTheme === "light" ){
             ModeTheme = "night" ;
             localStorage.setItem("mode",ModeTheme);
-            page = a ;
+            
             modeTheme();
         } else {
             ModeTheme = "light" ; 
             localStorage.setItem("mode",ModeTheme);
-            page = a ;
+            
             modeTheme();
         }
   }
