@@ -166,12 +166,12 @@
         if( ModeTheme === "light" ){
             ModeTheme = "night" ;
             localStorage.setItem("mode",ModeTheme);
-            consol.log(ModeTheme);
+            console.log(ModeTheme);
             modeTheme();
         } else {
             ModeTheme = "light" ; 
             localStorage.setItem("mode",ModeTheme);
-            consol.log(ModeTheme);
+            console.log(ModeTheme);
             modeTheme();
         }
   }
