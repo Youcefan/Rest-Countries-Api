@@ -157,19 +157,20 @@
 
 
 // theme //
-  let ModeTheme = "light" ;
+  let ModeTheme = localStorage.getItem("mode") ;
+  if ( ModeTheme == null){
+    ModeTheme = "light";
+  }
   let page ;
   function changetheme(a){
         if( ModeTheme === "light" ){
             ModeTheme = "night" ;
-            sessionStorage.clear();
-            sessionStorage.setItem("mode",ModeTheme);
+            localStorage.setItem("mode",ModeTheme);
             page = a ;
             modeTheme();
         } else {
-            ModeTheme = "light" ;
-            sessionStorage.clear();
-            sessionStorage.setItem("mode",ModeTheme);
+            ModeTheme = "light" ; 
+            localStorage.setItem("mode",ModeTheme);
             page = a ;
             modeTheme();
         }
