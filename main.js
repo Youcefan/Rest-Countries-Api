@@ -158,22 +158,19 @@
 
 // theme //
   let ModeTheme = localStorage.getItem("mode");
-
 if (ModeTheme == null) {
-  ModeTheme = "light";
-  localStorage.setItem("mode", ModeTheme);
+    ModeTheme = "light";
 }
 
 function changetheme() {
-  if (ModeTheme === "light") {
-    ModeTheme = "night";
+    if (ModeTheme === "light") {
+        ModeTheme = "night";
+    } else {
+        ModeTheme = "light";
+    }
     localStorage.setItem("mode", ModeTheme);
     modeTheme();
-  } else {
-    ModeTheme = "light";
-    localStorage.setItem("mode", ModeTheme);
-    modeTheme();
-  }
+    console.log("Current Mode:", ModeTheme); // Log the current mode
 }
 
 
