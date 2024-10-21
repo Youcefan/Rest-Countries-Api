@@ -124,7 +124,7 @@
 
 // get country in New Page //
    function getCountry(nameOfcountry){
-         window.location.href=`CountryPage.html?name=${nameOfcountry}`;
+         window.location.href = "countrypage.html?name=" + countryName;
    }
 // ---get country in New Page ---//
 
