@@ -157,24 +157,24 @@
 
 
 // theme //
-  let ModeTheme = localStorage.getItem("mode") ;
-  if ( ModeTheme == null){
+  let ModeTheme = localStorage.getItem("mode");
+
+if (ModeTheme == null) {
+  ModeTheme = "light";
+  localStorage.setItem("mode", ModeTheme);
+}
+
+function changetheme() {
+  if (ModeTheme === "light") {
+    ModeTheme = "night";
+    localStorage.setItem("mode", ModeTheme);
+    modeTheme();
+  } else {
     ModeTheme = "light";
+    localStorage.setItem("mode", ModeTheme);
+    modeTheme();
   }
-  
-  function changetheme(){
-        if( ModeTheme === "light" ){
-            ModeTheme = "night" ;
-            localStorage.setItem("mode",ModeTheme);
-            
-            modeTheme();
-        } else {
-            ModeTheme = "light" ; 
-            localStorage.setItem("mode",ModeTheme);
-            
-            modeTheme();
-        }
-  }
+}
 
 
 
