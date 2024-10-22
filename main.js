@@ -198,10 +198,10 @@
               card.style.color = "hsl(200, 15%, 8%)";
           }); }
                 
-                if(document.querySelector(".form-select") !== null && document.querySelector(".srch") !== null)
+                if(document.querySelector(".form-select") !== null && document.querySelector(".srch") !== null){
                document.querySelector(".form-select").classList.add("night-2");
                document.querySelector(".srch").classList.add("night-1");
-      
+                }
             
             document.querySelectorAll(".theme").forEach(function(inputt){
                 inputt.style.background = "hsl(0, 0%, 100%)";
