@@ -1,12 +1,14 @@
 
 // Get Countries // 
  function  getCountries(){
-   modeTheme();
     Cards = document.getElementById("Cards")
     Cards.innerHTML = "";
+    Cards.classList.add("app");
+    Cards.style.opacity = "0";
     toggleLoader(true);
-    axios.get("data.json")
+    axios.get("./data.json")
     .then(response=>{
+      
         toggleLoader(false);
       let data = response.data
       for( data of data){
@@ -20,10 +22,12 @@
                       <p class="m-1 fs-6"><strong class="fw-bold">Capital:</strong> ${data.capital}</p>
                   </div>
               </div>` 
-       modeTheme();
       }
+      setTimeout(()=>{
+        Cards.style.opacity = "1";
+      },300)
       
-        
+        modeTheme();
     })
 }
 //--- Get Countries--- // 
