@@ -181,6 +181,7 @@
   function modeTheme() {
     ModeTheme = sessionStorage.getItem("mode") ;
       if (ModeTheme == "light") {
+         console.log("true light");
           document.body.style.background = "hsl(0, 0%, 98%)";
           document.body.style.color = "hsl(200, 15%, 8%)";
           document.querySelector(".navbar").style.background = "hsl(0, 0%, 100%)";
@@ -203,6 +204,7 @@
             })
           
       } else {
+         console.log("true night");
           document.body.style.background = "hsl(207, 26%, 17%)";
           document.body.style.color = "hsl(0, 0%, 100%)";
           document.querySelector(".navbar").style.background = "hsl(209, 23%, 22%)";
