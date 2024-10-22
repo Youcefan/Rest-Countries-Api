@@ -135,7 +135,7 @@
 
 // get border country // 
     function getBorderCountry(nameOfcountry){
-        getCountry(nameOfcountry)
+        
          getcountryByname(nameOfcountry)
     }
 
