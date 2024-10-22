@@ -19,9 +19,10 @@
                       <p class="m-1 fs-6"><strong class="fw-bold">Capital:</strong> ${data.capital}</p>
                   </div>
               </div>` 
+       modeTheme();
       }
       
-        modeTheme();
+        
     })
 }
 //--- Get Countries--- // 
