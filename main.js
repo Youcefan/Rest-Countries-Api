@@ -162,18 +162,19 @@
   let ModeTheme = localStorage.getItem("mode") ;
   if ( ModeTheme == null){
     ModeTheme = "light";
+    localStorage.setItem("mode",ModeTheme);
   }
   
   function changetheme(){
         if( ModeTheme === "light" ){
             ModeTheme = "night" ;
             localStorage.setItem("mode",ModeTheme);
-            console.log(ModeTheme);
+            
             modeTheme();
         } else {
             ModeTheme = "light" ; 
             localStorage.setItem("mode",ModeTheme);
-            console.log(ModeTheme);
+            
             modeTheme();
         }
   }
@@ -182,9 +183,9 @@
 
   function modeTheme() {
     ModeTheme = localStorage.getItem("mode") ;
-     console.log(ModeTheme+ "function mode theme");
+     
       if (ModeTheme == "light") {
-         console.log("true light");
+         
           document.body.style.background = "hsl(0, 0%, 98%)";
           document.body.style.color = "hsl(200, 15%, 8%)";
           document.querySelector(".navbar").style.background = "hsl(0, 0%, 100%)";
@@ -207,7 +208,7 @@
             })
           
       } else {
-         console.log("true night");
+         
           document.body.style.background = "hsl(207, 26%, 17%)";
           document.body.style.color = "hsl(0, 0%, 100%)";
           document.querySelector(".navbar").style.background = "hsl(209, 23%, 22%)";
