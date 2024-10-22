@@ -180,6 +180,7 @@
 
   function modeTheme() {
     ModeTheme = sessionStorage.getItem("mode") ;
+     console.log(ModeTheme+ "function mode theme");
       if (ModeTheme == "light") {
          console.log("true light");
           document.body.style.background = "hsl(0, 0%, 98%)";
