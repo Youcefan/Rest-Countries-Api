@@ -199,8 +199,8 @@
           }); }
                 
                 if(document.querySelector(".form-select") !== null && document.querySelector(".srch") !== null){
-               document.querySelector(".form-select").classList.add("night-2");
-               document.querySelector(".srch").classList.add("night-1");
+               document.querySelector(".form-select").classList.remove("night-2");
+               document.querySelector(".srch").classList.remove("night-1");
                 }
             
             document.querySelectorAll(".theme").forEach(function(inputt){
