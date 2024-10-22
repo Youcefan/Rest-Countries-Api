@@ -1,6 +1,7 @@
 
 // Get Countries // 
  function  getCountries(){
+   modeTheme();
     Cards = document.getElementById("Cards")
     Cards.innerHTML = "";
     toggleLoader(true);
