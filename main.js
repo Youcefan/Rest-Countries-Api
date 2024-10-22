@@ -143,7 +143,7 @@
 
 // Back function //
   function backPage(){
-    window.location.href = "index.html";
+    window.location.href = "https://rest-countries-api-youcefan.netlify.app";
   }
 // ---Back function--- //
 
