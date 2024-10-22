@@ -179,7 +179,7 @@
 
 
   function modeTheme() {
-    ModeTheme = sessionStorage.getItem("mode") ;
+    ModeTheme = localStorage.getItem("mode") ;
      console.log(ModeTheme+ "function mode theme");
       if (ModeTheme == "light") {
          console.log("true light");
