@@ -196,11 +196,13 @@
               document.querySelectorAll(".card").forEach(function(card) {
               card.style.background = "hsl(0, 0%, 100%)";
               card.style.color = "hsl(200, 15%, 8%)";
-          });
+          }); }
                 
-                document.querySelector(".form-select").classList.remove("night-2");
-                document.querySelector(".srch").classList.remove("night-1");
-            }
+                if(document.querySelector(".form-select") !== null && document.querySelector(".srch") !== null)
+               document.querySelector(".form-select").classList.add("night-2");
+               document.querySelector(".srch").classList.add("night-1");
+      
+            
             document.querySelectorAll(".theme").forEach(function(inputt){
                 inputt.style.background = "hsl(0, 0%, 100%)";
                 inputt.style.color = "hsl(200, 15%, 8%)";
@@ -208,7 +210,12 @@
             })
           
       } else {
-         
+           document.querySelectorAll(".theme").forEach(function(inputt){
+          inputt.style.backgroundColor = "hsl(209, 23%, 22%)";
+          inputt.style.color = "hsl(0, 0%, 100%)";
+          inputt.style.border = "hsl(209, 23%, 22%)";
+        
+         })  
           document.body.style.background = "hsl(207, 26%, 17%)";
           document.body.style.color = "hsl(0, 0%, 100%)";
           document.querySelector(".navbar").style.background = "hsl(209, 23%, 22%)";
@@ -221,17 +228,12 @@
               card.style.background = "hsl(209, 23%, 22%)";
               card.style.color = "hsl(0, 0%, 100%)";
               
-          });
-          
+          });}
+          if(document.querySelector(".form-select") !== null && document.querySelector(".srch") !== null) {
         document.querySelector(".form-select").classList.add("night-2");
         document.querySelector(".srch").classList.add("night-1");
       }
-      document.querySelectorAll(".theme").forEach(function(inputt){
-        inputt.style.backgroundColor = "hsl(209, 23%, 22%)";
-        inputt.style.color = "hsl(0, 0%, 100%)";
-        inputt.style.border = "hsl(209, 23%, 22%)";
-        
-    })     
+         
              }
 }
 
