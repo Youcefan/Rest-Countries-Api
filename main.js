@@ -192,7 +192,7 @@
           document.querySelector(".navbar").style.color = "hsl(200, 15%, 8%)";
            
 
-            if( window.location.href.includes("index")){
+            if( window.location.href.includes("index") || window.location.href == "https://mellow-bombolone-df2c89.netlify.app"){
               document.querySelectorAll(".card").forEach(function(card) {
               card.style.background = "hsl(0, 0%, 100%)";
               card.style.color = "hsl(200, 15%, 8%)";
@@ -216,7 +216,7 @@
 
 
 
-          if( window.location.href.includes("index")){
+          if( window.location.href.includes("index") || window.location.href == "https://mellow-bombolone-df2c89.netlify.app"){
           document.querySelectorAll(".card").forEach(function(card) {
               card.style.background = "hsl(209, 23%, 22%)";
               card.style.color = "hsl(0, 0%, 100%)";
