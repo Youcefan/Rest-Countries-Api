@@ -113,6 +113,7 @@
             
         </div>
            `
+         document.getElementById("app").style.opacity='1';
         }
         modeTheme();
     })
@@ -136,7 +137,10 @@
 // get border country // 
     function getBorderCountry(nameOfcountry){
         
-         getcountryByname(nameOfcountry)
+         document.getElementById("app").style.opacity='0';
+        setTimeout(() => {
+          getcountryByname(nameOfcountry)
+        },400 )
     }
 
 // ---get border country--- //
