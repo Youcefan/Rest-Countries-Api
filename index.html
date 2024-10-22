@@ -113,7 +113,13 @@
             visibility: hidden;
             transition:0.6s ease ;
            }
-
+          .app
+          {
+              
+              opacity:0;
+              transition: all 1s;
+             -webkit-transition: all 1s;
+          }
    </style>
 </head>
 <body>
@@ -129,7 +135,7 @@
        <!-- Nav Bar --> 
 
        <!-- Content -->
-          <div class="row pt-5 m-0"  >
+          <div class="row pt-5 m-0 app" id="app" >
 
             <!-- Search and Filter -->
               <div class="  row d-flex justify-content-md-between justify-content-start-flex">
@@ -194,7 +200,9 @@
 
     <script src="main.js"></script>
     <script>
-      
+      setTimeout(()=>{
+        document.getElementById("app").style.opacity='1';
+      },300)
       getCountries();
 
        // Search Country //
@@ -234,6 +242,9 @@
           let filtring = document.getElementById("Filter").value;
           Cards = document.getElementById("Cards")
           if(filtring !== "Filter by Region"){
+                 Cards.classList.add("app")
+                Cards.style.transition = "all 0.1s ";
+                Cards.style.opacity = "0";
                 Cards.innerHTML = "";
                 
                 axios.get("data.json")
@@ -255,6 +266,11 @@
                            </div>
                       </div>` 
                   } 
+                    Cards.style.transition = "all 1s"
+                          setTimeout(()=>{
+                            
+                       Cards.style.opacity = "1";
+                     },300)
                   modeTheme();
                 })  } else {
                   getCountries();
